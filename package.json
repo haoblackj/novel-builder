@@ -30,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/8amjp/novel-builder.git"
+    "url": "git+https://github.com/haoblackj/novel-builder.git"
   },
-  "author": "8amjp",
+  "author": "haoblackj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/8amjp/novel-builder/issues"
+    "url": "https://github.com/haoblackj/novel-builder/issues"
   },
-  "homepage": "https://github.com/8amjp/novel-builder#readme",
+  "homepage": "https://github.com/haoblackj/novel-builder#readme",
   "keywords": [
     "novel",
     "epub",
@@ -50,8 +50,9 @@
     "fs-extra": "^7.0.1",
     "jp-wrap": "^0.2.2",
     "kansuji": "^1.1.0",
-    "markdown-it": "^8.4.2",
+    "markdown-it": "^13.0.1",
     "mustache": "^3.0.1",
     "puppeteer": "^1.15.0"
-  }
+  },
+  "private":true
 }
