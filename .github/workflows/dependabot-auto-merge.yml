@@ -1,20 +1,36 @@
-name: Dependabot auto-merge
-on:
-  pull_request_review:
-    types:
-      - submitted
+name: Dependabot automation
 
-permissions:
-  pull-requests: write
-  contents: write
+on:
+  pull_request:
+    types:
+      - opened
 
 jobs:
-  dependabot:
+  dependabot-automation:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' && github.event.review.state == 'approved' }}
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    timeout-minutes: 13
     steps:
-      - name: Order Dependabot to merge
-        run: gh pr comment --body "@dependabot merge" "$PR_URL"
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.AUTO_MERGE_BOT_APP_ID }}
+          private_key: ${{ secrets.AUTO_MERGE_BOT_PRIVATE_KEY }}
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.3.6
+        with:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+      - name: Approve & enable auto-merge for Dependabot PR
+        if: |
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        run: |
+          gh pr review --approve "$PR_URL"
+          gh pr edit "$PR_URL" -t "(auto merged) $PR_TITLE"
+          gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_AUTOMATION_TOKEN }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
