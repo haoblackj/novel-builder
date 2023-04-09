@@ -63,7 +63,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          #registry-url: 'https://npm.pkg.github.com'  
+          #registry-url: 'https://npm.pkg.github.com'
           # for publishing packages to npm
           registry-url: https://registry.npmjs.org
       - name: Git Identity
@@ -77,15 +77,6 @@ jobs:
         run: echo "PACKAGE_VERSION=$(cat package.json | jq -r .version)" >> $GITHUB_ENV
       - name: Install
         run: yarn install
-      - name: Publish
-        run: npm run ci:release
-        env:
-          # actions/setup-node create .npmrc with `NODE_AUTH_TOKEN` env if `registry-url` is defined
-          # === `echo "${ registry-url }/:_authToken=${ NODE_AUTH_TOKEN }" > .npmrc`
-          #NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          # for publishing packages to npm
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Git Tag
         uses: pkgdeps/git-tag-action@v2
         with:
