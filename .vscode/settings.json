@@ -1,0 +1,92 @@
+{
+  //"editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "boundary",
+  "editor.detectIndentation": false,
+  "editor.comments.insertSpace": false,
+  "editor.formatOnSave": true,
+  "textlint.autoFixOnSave": true,
+  "textlint.run": "onSave",
+  "files.associations": {
+    "*.md": "novel"
+  },
+  "git-graph.openNewTabEditorGroup": "Beside",
+  "githubPullRequests.fileListLayout": "flat",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.wordWrap": "bounded",
+  "workbench.startupEditor": "none",
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "　": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "editor.lineHeight": 24,
+  "editor.fontFamily": "HackGen35 Console NF",
+  "editor.wordWrapColumn": 130,
+  "editor.fontSize": 16,
+  "editor.minimap.renderCharacters": false,
+  "editor.bracketPairColorization.enabled": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/themes/**": true,
+    "**/GoogleDrive/**": true,
+    "**/Dropbox/**": true,
+    "**/Pictures/**": true,
+  },
+  "files.exclude": {
+    "/.git": true,
+    "/.DS_Store": true,
+    "/node_modules": true,
+    "/node_modules/": true
+  },
+  "search.exclude": {
+    "/node_modules": true
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "editor.tabSize": 2,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "git.ignoreMissingGitWarning": true,
+  "textlint.languages": [
+    "novel",
+    "markdown",
+    "plaintext",
+    "html",
+    "tex",
+    "latex",
+    "doctex"
+  ],
+  "textlint.trace": "messages",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "gitlens.views.repositories.avatars": false,
+  "git.ignoreRebaseWarning": true,
+  "workbench.editor.enablePreview": false,
+  "Novel.editor.sceneNavigator": false,
+  "Novel.preview.fontFamily": "\"源暎ちくご明朝 v3\"",
+  "Novel.preview.lineLength": 40,
+  "Novel.preview.linesPerPage": 16,
+  "Novel.preview.semanticHighligting": false,
+  //"workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
+  //"workbench.colorTheme": "Night Owl"
+  "workbench.colorTheme": "Monokai Dimmed",
+  "git.autofetch": true,
+  "git.fetchOnPull": true,
+  "git.autoRepositoryDetection": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreSubmodules": true,
+  "git.detectSubmodules": false,
+  "Novel.preview.userRegex": [
+    [
+      "(?<![,-9－])([0-9])(?![,-9－])",
+      "<em style=\"text-combine-upright: all;font-style: normal;\">$1</em>"
+    ]
+  ]
+}
