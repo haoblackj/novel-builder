@@ -17,13 +17,14 @@
         "terminal.integrated.defaultProfile.linux": "zsh"
       },
       "extensions": [
-        "EditorConfig.EditorConfig",
-        "eamodio.gitlens",
-        "GitHub.vscode-pull-request-github",
-        "KnisterPeter.vscode-commitizen",
-        "sdras.night-owl",
-        "github.vscode-github-actions"
-      ]
+		"EditorConfig.EditorConfig",
+		"eamodio.gitlens",
+		"GitHub.vscode-pull-request-github",
+		"KnisterPeter.vscode-commitizen",
+		"sdras.night-owl",
+		"github.vscode-github-actions",
+		"GitHub.copilot"
+	]
     }
   }
   // Features to add to the dev container. More info: https://containers.dev/features.
