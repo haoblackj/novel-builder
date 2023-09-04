@@ -50,7 +50,7 @@
     "小説"
   ],
   "dependencies": {
-    "archiver": "^5.3.2",
+    "archiver": "^6.0.1",
     "fs-extra": "^11.1.1",
     "jp-wrap": "^0.2.2",
     "kansuji": "^1.1.0",
