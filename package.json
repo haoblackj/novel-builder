@@ -54,7 +54,7 @@
     "fs-extra": "^11.2.0",
     "jp-wrap": "^0.2.2",
     "kansuji": "^1.1.0",
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.0.0",
     "mustache": "^4.2.0",
     "puppeteer": "^20.9.0"
   },
