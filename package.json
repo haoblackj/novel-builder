@@ -56,7 +56,7 @@
     "kansuji": "^1.1.0",
     "markdown-it": "^14.1.1",
     "mustache": "^4.2.0",
-    "puppeteer": "^22.9.0"
+    "puppeteer": "^22.15.0"
   },
   "private": true
 }
